@@ -58,10 +58,10 @@ class ScoreFragment : Fragment() {
 
         binding.scoreViewModel = viewModel
 
+        binding.lifecycleOwner = viewLifecycleOwner
+
         // Add observer for score
-        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
+
 
 
         // Navigates back to game when button is pressed
