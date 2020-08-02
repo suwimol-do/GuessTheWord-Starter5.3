@@ -54,6 +54,11 @@ class GameFragment : Fragment() {
                 false
         )
 
+        viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
+
+        // Set the viewmodel for databinding - this allows the bound layout access
+        // to all the data in the VieWModel
+
         Log.i("GameFragment", "Called ViewModelProviders.of")
 
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
